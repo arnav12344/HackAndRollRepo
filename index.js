@@ -54,5 +54,13 @@ function chatGptSpeaker(name) {
     });
 }
 
+function startGame(mode) {
+    // Add logic to start the game based on the selected mode
+    alert('Game starting in ' + mode + ' player mode!');
+    let startbtn=document.querySelector("#button")
+    startbtn.style.display="none"
+}
+
+
 
 

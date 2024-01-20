@@ -25,12 +25,24 @@ function showPromptPage() {
 
 function jumblePrompt() {
     var promptInput = document.getElementById('prompt').value;
+    let jumbleprompt=chatGptSpeaker(promptInput)
     // Call your function to jumble the prompt here (not implemented in this example).
     prompts.push(promptInput);
 
     if (currentPlayer < numOfPlayers) {
         currentPlayer++;
         showPromptPage();
+        if (currentPlayer>1){
+            document.body.innerHTML=`<div class="container">
+            <h1>Psycho Whisper - Player ${currentPlayer}</h1>
+            <h3>Jumbled prompt is ${jumbleprompt}
+            <label for="prompt">Enter a prompt:</label>
+            <input type="text" id="prompt">
+            <h3>Jumbled prompt is ${jumbleprompt}
+            <button onclick="jumblePrompt()">Whisper</button>
+        </div>`
+            
+        }
     } else {
         showGuessPage();
     }
@@ -43,7 +55,7 @@ function showGuessPage() {
             <ul>
                 ${prompts.map((prompt, index) => `<li>${index + 1}. ${prompt}</li>`).join('')}
             </ul>
-            <button onclick="finishGame()">Finish</button>
+            <button onclick="window.location.reload();">Finish</button>
         </div>
     `;
 }
@@ -83,7 +95,7 @@ function chatGptSpeaker(name) {
         },
         body: JSON.stringify({
             "model": "gpt-3.5-turbo",
-            "messages": [{"role": "user", "content": "Reverse Autocorrect this text-  "+ name}]
+            "messages": [{"role": "user", "content": "Reverse Autocorrect this text in a funny way-  "+ name}]
         })
     }).then(response => {
         if (response.status === 429 && retryCount < maxRetries) {

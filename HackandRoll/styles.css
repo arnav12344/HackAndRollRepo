@@ -1,5 +1,5 @@
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Joti One', serif;
     background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(73,63,92,1) 26%, rgba(33,33,48,1) 100%);
     margin: 0;
     padding: 0;
@@ -10,14 +10,52 @@ body {
 }
 
 .container {
+    position: relative;
     text-align: center;
     background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
-    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    padding: 12px;
+    gap: 12px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
     width: 300px;
     height: 480px;
     margin: auto;
+}
+
+.container::before{
+    content: '';
+    position: absolute;
+    inset: 0;
+    left: -5px;
+    margin: auto;
+    width: 325px;
+    height: 505px;
+    border-radius: 8px;
+    background: linear-gradient(-45deg, #e81cff 0%, #40c9ff 100% );
+    z-index: -10;
+    pointer-events: none;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.container::after{
+    content: "";
+    z-index: -1;
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(-45deg, #fc00ff 0%, #00dbde 100% );
+    transform: translate3d(0, 0, 0) scale(1);
+    filter: blur(20px);
+}
+
+.container:hover::after{
+    filter: blur(30px);
+}
+
+.container:hover::before{
+    transform: rotate(-90deg) scaleX(1.6) scaleY(0.67);
 }
 
 button {

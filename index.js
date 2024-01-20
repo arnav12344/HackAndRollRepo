@@ -21,13 +21,13 @@ function bruh(){
 }
 
 var text = ""
-const token = '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'
+const token = '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'
 function chatGptSpeaker(name){
     fetch('https://api.openai.com/v1/chat/completions',{
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
-            'Authorization': 'Bearer '+token
+            'Authorization': 'Bearer '+token,
         },
         body: JSON.stringify({
             "model": "gpt-3.5-turbo",

@@ -1,6 +1,6 @@
 body {
     font-family: 'Arial', sans-serif;
-    background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(47,47,47,1) 100%);
+    background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(73,63,92,1) 26%, rgba(33,33,48,1) 100%);
     margin: 0;
     padding: 0;
     display: flex;
@@ -15,15 +15,26 @@ body {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    height: 480px;
+    margin: auto;
 }
 
 button {
     padding: 10px 20px;
-    margin-top: 10px;
+    margin: auto;
     cursor: pointer;
+    display: block;
+    margin-top: 10px;
 }
 
 input {
     padding: 8px;
     margin: 5px 0;
+}
+#players {
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 50px;
+    
 }

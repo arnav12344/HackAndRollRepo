@@ -1,5 +1,6 @@
 body {
-    font-family: 'Joti One', serif;
+    font-family: 'Jolly Lodger', system-ui;
+    font-size: x-large;
     background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(73,63,92,1) 26%, rgba(33,33,48,1) 100%);
     margin: 0;
     padding: 0;
@@ -7,6 +8,20 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
+}
+
+p {
+    font-family: 'Joti One', serif;
+    font-size: large;
+
+    margin-top: -15px;
+}
+
+label {
+    font-family: 'Joti One', serif;
+    font-size: large;
+
+    margin-top: -15px;
 }
 
 .container {
@@ -61,6 +76,7 @@ body {
 button {
     padding: 10px 20px;
     margin: auto;
+    border-radius: 5px;
     cursor: pointer;
     display: block;
     margin-top: 10px;

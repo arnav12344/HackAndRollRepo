@@ -12,3 +12,8 @@ function addText() {
     // Clear the text box
     textBox.value = '';
 }
+
+function bruh(){
+    textcontent=document.getElementById('textBox').value
+    console.log(textcontent)
+}

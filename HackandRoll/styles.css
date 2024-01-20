@@ -1,6 +1,6 @@
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f0f0f0;
+    background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(47,47,47,1) 100%);
     margin: 0;
     padding: 0;
     display: flex;
@@ -11,7 +11,7 @@ body {
 
 .container {
     text-align: center;
-    background-color: #fff;
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);

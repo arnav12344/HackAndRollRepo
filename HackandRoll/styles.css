@@ -151,5 +151,7 @@ input {
     margin-right: auto;
     margin-left: auto;
     margin-top: 50px;
-    
+    border-radius: 5px 5px 5px 5px;
+    font-family: 'Joti One', serif;
+    font-size: large;
 }

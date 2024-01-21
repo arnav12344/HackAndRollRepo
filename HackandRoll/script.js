@@ -41,9 +41,10 @@ async function jumblePrompt() {
         if (currentPlayer>1){
             document.body.innerHTML=`<div class="container">
             <h1>Psycho Whisper - Player ${currentPlayer}</h1>
-            <h3>Jumbled prompt is ${prevAnswer}</h3>
+            <h3>Jumbled prompt is : ${prevAnswer}</h3>
             <label for="prompt">Enter a prompt:</label>
-            <input type="text" id="prompt">
+            <input type="text" id="prompt" class="players" style="font-family: 'Joti One', serif;">
+
             <button onclick="jumblePrompt()">Whisper</button>
         </div>`
             
